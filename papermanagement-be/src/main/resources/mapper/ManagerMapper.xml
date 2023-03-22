@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.papermanagementbe.mapper.ManagerMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.papermanagementbe.schema.ManagerSchema">
+            <id property="id" column="Id" jdbcType="INTEGER"/>
+            <result property="teacherNo" column="TeacherNo" jdbcType="VARCHAR"/>
+            <result property="studentNo" column="StudentNo" jdbcType="VARCHAR"/>
+            <result property="advertisingNo" column="AdvertisingNo" jdbcType="VARCHAR"/>
+            <result property="managerAccount" column="ManagerAccount" jdbcType="VARCHAR"/>
+            <result property="managerName" column="ManagerName" jdbcType="VARCHAR"/>
+            <result property="managerPassword" column="ManagerPassword" jdbcType="VARCHAR"/>
+            <result property="managerNo" column="ManagerNo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        Id,TeacherNo,StudentNo,
+        AdvertisingNo,ManagerAccount,ManagerName,
+        ManagerPassword,ManagerNo
+    </sql>
+</mapper>
