@@ -24,8 +24,14 @@
 import Vue from "vue";
 import VueRouter from 'vue-router'
 import login from "../page/login/login.vue";
+import daoshi from "../page/conservator/daoshi.vue";
 import conservator from "../page/conservator/conservator.vue";
-import conservator from "../page/conservator/conservator.vue";
+import student from "../page/conservator/student.vue";
+import task from "../page/conservator/task.vue";
+import Announcement from "../page/conservator/Announcement.vue";
+import modification from "../page/conservator/modification.vue";
+
+
 
 //2.使用路由
 Vue.use(VueRouter);
@@ -43,7 +49,35 @@ const router = new VueRouter({
         {
           path: "/conservator",
           name:'conservator',
-          component: conservator
+          component: conservator,
+          children:[
+            {
+              path: "/daoshi",
+              name:'daoshi',
+              component: daoshi
+            },
+            {
+              path: "/student",
+              name:'student',
+              component: student
+            },
+            {
+              path: "/task",
+              name:'task',
+              component: task
+            },
+            {
+              path: "/Announcement",
+              name:'Announcement',
+              component: Announcement
+            },
+            {
+              path: "/modification",
+              name:'modification',
+              component: modification
+            },
+            
+          ]
         }
       ]
 })

@@ -1,5 +1,8 @@
 <template>
   <div class="guanliyuan">
+    <!-- @close="handleClose"
+    @open="handleOpen" -->
+    
     <el-row class="tac">
       <el-col :span="12">
         <h5>管理员</h5>
@@ -8,11 +11,10 @@
           router
           mode="horizontal"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
+       
         >
           <!-- <el-submenu index="1">
             <template slot="title">
@@ -43,6 +45,7 @@
         </el-menu>
       </el-col>
     </el-row>
+    <router-view></router-view>
     <!-- 列表展示 -->
     <!-- <div class="liebiao">
       <el-table
@@ -99,7 +102,7 @@
         // 导航菜单
         navlist:[
           {
-            name:'/',
+            name:'/daoshi',
             navitem:'导师管理'
           },
           {
@@ -162,6 +165,9 @@
 .el-menu-vertical-demo {
   height: 800px;
   width: 200px;
+}
+.el-menu--horizontal>.el-menu-item{
+  margin-left: 28px;
 }
 /* .el-submenu{
     width: 100px;
