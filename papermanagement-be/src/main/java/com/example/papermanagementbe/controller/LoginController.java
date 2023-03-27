@@ -24,7 +24,7 @@ public class LoginController {
     private LoginService loginService;
 
     /**
-     * 登录页面
+     * 登录校验
      * @param loginDto
      * @return
      */

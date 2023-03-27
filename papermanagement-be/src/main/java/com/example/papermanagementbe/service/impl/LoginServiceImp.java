@@ -66,8 +66,8 @@ public class LoginServiceImp implements LoginService {
             }else {
                 StudentSchema studentSchema = studentMapper.selectOne(new QueryWrapper<StudentSchema>().eq("studentno", uuid));
                 if (studentSchema!=null){
-                    header.setCode(Error.NO_HUMAN_ERR.getCode());
-                    header.setErrorMessage(Error.NO_HUMAN_ERR.getErrormessage());
+                    header.setCode(Error.SUCCESS_CODE.getCode());
+                    header.setErrorMessage(Error.SUCCESS_CODE.getErrormessage());
                     baseDtoResponse.setBody(studentSchema);
                 }else {
                     header.setCode(Error.NO_HUMAN_ERR.getCode());

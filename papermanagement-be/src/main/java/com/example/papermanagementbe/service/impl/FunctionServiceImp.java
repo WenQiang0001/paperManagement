@@ -28,7 +28,7 @@ public class FunctionServiceImp implements FunctionService {
      * @return
      */
     @Override
-//    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class)
     public int addTeacher(BaseDtoRequest<TeacherSchema> teacherSchema) {
         TeacherSchema body = teacherSchema.getBody();
         body.setTeacherNo(NumberUtil.getId());

@@ -43,6 +43,7 @@ public class FunctionController {
             }
             if(functionService.addTeacher(teacher)>0){
                 header.setCode(Error.SUCCESS_CODE.getCode());
+                header.setErrorMessage(Error.SUCCESS_CODE.getErrormessage());
             }
         } catch (Exception e) {
             header.setErrorMessage(Error.FAILD_CODE.getErrormessage());
